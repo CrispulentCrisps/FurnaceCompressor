@@ -1,0 +1,10 @@
+{
+    "cmake.sourceDirectory": "${workspaceFolder}/library/zlib-1.2.13",
+    "files.associations": {
+        "xstring": "cpp",
+        "iosfwd": "cpp",
+        "vector": "cpp",
+        "system_error": "cpp",
+        "xlocale": "cpp"
+    }
+}

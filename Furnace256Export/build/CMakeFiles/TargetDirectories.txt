@@ -1,0 +1,8 @@
+C:/Users/david/Documents/Tools/Furnace256Export/build/CMakeFiles/zlib.dir
+C:/Users/david/Documents/Tools/Furnace256Export/build/CMakeFiles/zlibstatic.dir
+C:/Users/david/Documents/Tools/Furnace256Export/build/CMakeFiles/example.dir
+C:/Users/david/Documents/Tools/Furnace256Export/build/CMakeFiles/minigzip.dir
+C:/Users/david/Documents/Tools/Furnace256Export/build/CMakeFiles/RUN_TESTS.dir
+C:/Users/david/Documents/Tools/Furnace256Export/build/CMakeFiles/INSTALL.dir
+C:/Users/david/Documents/Tools/Furnace256Export/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/david/Documents/Tools/Furnace256Export/build/CMakeFiles/ZERO_CHECK.dir

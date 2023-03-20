@@ -1,0 +1,13 @@
+C:/Users/david/Documents/Tools/Furnace256Export/library/zlib-1.2.13/build/CMakeFiles/zlib.dir
+C:/Users/david/Documents/Tools/Furnace256Export/library/zlib-1.2.13/build/CMakeFiles/zlibstatic.dir
+C:/Users/david/Documents/Tools/Furnace256Export/library/zlib-1.2.13/build/CMakeFiles/example.dir
+C:/Users/david/Documents/Tools/Furnace256Export/library/zlib-1.2.13/build/CMakeFiles/minigzip.dir
+C:/Users/david/Documents/Tools/Furnace256Export/library/zlib-1.2.13/build/CMakeFiles/example64.dir
+C:/Users/david/Documents/Tools/Furnace256Export/library/zlib-1.2.13/build/CMakeFiles/minigzip64.dir
+C:/Users/david/Documents/Tools/Furnace256Export/library/zlib-1.2.13/build/CMakeFiles/test.dir
+C:/Users/david/Documents/Tools/Furnace256Export/library/zlib-1.2.13/build/CMakeFiles/edit_cache.dir
+C:/Users/david/Documents/Tools/Furnace256Export/library/zlib-1.2.13/build/CMakeFiles/rebuild_cache.dir
+C:/Users/david/Documents/Tools/Furnace256Export/library/zlib-1.2.13/build/CMakeFiles/list_install_components.dir
+C:/Users/david/Documents/Tools/Furnace256Export/library/zlib-1.2.13/build/CMakeFiles/install.dir
+C:/Users/david/Documents/Tools/Furnace256Export/library/zlib-1.2.13/build/CMakeFiles/install/local.dir
+C:/Users/david/Documents/Tools/Furnace256Export/library/zlib-1.2.13/build/CMakeFiles/install/strip.dir

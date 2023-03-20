@@ -1,0 +1,4 @@
+{
+  "enableCMake": true,
+  "sourceDirectory": "library\\zlib-1.2.13"
+}

@@ -1,0 +1,7 @@
+C:/Users/david/Documents/Tools/Furnace256Export/library/zlib-1.2.13/out/install/x64-Debug/lib/zlibd.lib
+C:/Users/david/Documents/Tools/Furnace256Export/library/zlib-1.2.13/out/install/x64-Debug/bin/zlibd.dll
+C:/Users/david/Documents/Tools/Furnace256Export/library/zlib-1.2.13/out/install/x64-Debug/lib/zlibstaticd.lib
+C:/Users/david/Documents/Tools/Furnace256Export/library/zlib-1.2.13/out/install/x64-Debug/include/zconf.h
+C:/Users/david/Documents/Tools/Furnace256Export/library/zlib-1.2.13/out/install/x64-Debug/include/zlib.h
+C:/Users/david/Documents/Tools/Furnace256Export/library/zlib-1.2.13/out/install/x64-Debug/share/man/man3/zlib.3
+C:/Users/david/Documents/Tools/Furnace256Export/library/zlib-1.2.13/out/install/x64-Debug/share/pkgconfig/zlib.pc
