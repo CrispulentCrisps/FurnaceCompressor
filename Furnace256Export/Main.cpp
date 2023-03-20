@@ -67,6 +67,7 @@ void WriteCompressedFile(string FileName, char* fileBuf, size_t fileSize){
             # Panning macro only takes a a couple bits if it's hardpanned
             # if instrument cannot change pulse width or waveform then the data for those parameters should not be included
     */
+
     FILE* CompFile;
     char* cstr = new char [FileName.length()+10];
     FileName+="_COMP.cfur";
@@ -175,7 +176,7 @@ void LoadFile(string FileName){
 
 int main(int argc, char** argv)
 {
-    cout << " Furnace Playable Compressor Converter \n Code by: Crisps + TildeArrow (creator of furnace) \n 20/03/2023 \n \n Please enter the file name of your file.\n \n";
+    cout << " Furnace Playable Compressor Converter \n Code by: Crisps + TildeArrow (creator of furnace) \n 20/03/2023 \n \n Please enter the file name of your file.\n \n Version: 0.1 \n \n";
     string FileName;
     cin >> FileName;
     LoadFile(FileName);
