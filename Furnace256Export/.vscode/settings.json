@@ -5,6 +5,7 @@
         "iosfwd": "cpp",
         "vector": "cpp",
         "system_error": "cpp",
-        "xlocale": "cpp"
+        "xlocale": "cpp",
+        "cstddef": "cpp"
     }
 }

@@ -29,7 +29,7 @@ void WriteRawFile(string FileName, char* fileBuf, size_t fileSize){
     char* cstr = new char [FileName.length()+10];
     FileName+="_RAW.bin";
     strcpy (cstr, FileName.c_str());
-    RawFile = fopen(cstr, "w");
+    RawFile = fopen(cstr, "wb");
     fwrite(fileBuf, 1, fileSize, RawFile);
     fclose(RawFile);
 }
@@ -49,7 +49,7 @@ void WriteCompressedFile(string FileName, char* fileBuf, size_t fileSize){
             # make volume range adapt to each system, so if the volume only used 4 bits use only 4 bits
             # remove all strings, like song comments alongside names, author information, album etc
             # make panning take up only 2 bits if it's hard panned
-            #
+            # Handle pattern repitition by storing each unique pattern in a table with a pointer to each one.
 
             #     - - = = = = = - -
             # - - = =  Subsongs = = - -
@@ -69,10 +69,110 @@ void WriteCompressedFile(string FileName, char* fileBuf, size_t fileSize){
     */
 
     FILE* CompFile;
+    FILE* TempFile;
     char* cstr = new char [FileName.length()+10];
     FileName+="_COMP.cfur";
     strcpy (cstr, FileName.c_str());
-    CompFile = fopen(cstr, "w");
+    TempFile = fopen(cstr, "w");
+
+    //Compression
+
+    struct Header
+    {
+        byte HeaderInfo[32];
+        /*
+            16 for 'format magic'
+            2 version
+            2 reserved
+            4 song pointer info
+            8 reserved
+        */
+    };
+    
+    struct SongInfo
+    {
+        int BlockID;
+        int BlockSize;
+        
+        byte TimeBase;//Any data relating to this is for the absolute first song
+        byte Speed1;
+        byte Speed2;
+        byte InitialArpeggioSpeed;
+        
+        float TicksPerSecond;
+        
+        short PatternLength;
+        short OrderLength;
+
+        byte HighlightA;
+        byte HighlightB;
+
+        short InstrumentCount;
+        short WavetableCount;
+        short SampleCount;
+        
+        int PatternCount;
+
+        byte SoundchipList[32];
+        byte SoundchipVolume[32];
+        byte SoundchipPanning[32];
+        byte SoundchipFlagPointers[128];
+
+        string SongName;
+        string SongAuthor;
+        
+        float ATuning;
+        
+        byte LimitSlides;
+        byte LinearPitch;
+        byte LoopModality;
+        byte ProperNoiseLayout;
+
+        byte WaveDutyIsVolume;
+        byte ResetMacroOnPorta;
+        byte LegacyVolumeSlides;
+        byte CompatibleArpeggio;
+        
+        byte NoteOffResetsSlide;
+        byte TargetResetsSlide;
+        byte ArpeggioInhibitsPortamento;
+        byte WackAlgorithmMacro;
+        
+        byte BrokenShortcutSlides;
+        byte IgnoreDuplicateSlides;
+        byte StopPortamentoOnNoteOff;
+        byte ContinuousVibrato;
+        
+        byte BrokenDACMode;
+        byte OneTickCut;
+        byte InstrumentChangeDuringPorta;
+        byte ResetNoteBaseOnArpWhenOff;
+        
+        vector<int> InstrumentPointers;
+        vector<int> WavetablePointers;
+        vector<int> SamplePointers;
+        
+        vector<byte> Orders[1];
+
+        byte ChannelHideOrder;
+        byte ChannelCollapseOrder;
+        
+        string ChannelNames[1];
+        string ChannelShortNames[1];
+        string SongComment;
+        
+        Bytef MasterVolume[1];
+        
+        byte BrokenSpeedSelection;
+        byte NoSlidesOnFirstTick;
+        byte NextRowResetsArpPos;
+        byte IgnoreJumpAtEnd;
+        byte BuggyPortamentoAfterSlide;
+
+    };
+
+    //Writing
+    CompFile = TempFile;
     fwrite(fileBuf, 1, fileSize, CompFile);
     fclose(CompFile);
 }
