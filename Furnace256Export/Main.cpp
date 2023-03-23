@@ -152,13 +152,13 @@ void WriteCompressedFile(string FileName, char* fileBuf, size_t fileSize){
         vector<int> WavetablePointers;
         vector<int> SamplePointers;
         
-        vector<byte> Orders[1];
+        vector<byte> Orders;
 
         byte ChannelHideOrder;
         byte ChannelCollapseOrder;
         
-        string ChannelNames[1];
-        string ChannelShortNames[1];
+        vector<string> ChannelNames;
+        vector<string> ChannelShortNames;
         string SongComment;
         
         Bytef MasterVolume[1];
@@ -167,8 +167,41 @@ void WriteCompressedFile(string FileName, char* fileBuf, size_t fileSize){
         byte NoSlidesOnFirstTick;
         byte NextRowResetsArpPos;
         byte IgnoreJumpAtEnd;
+        
         byte BuggyPortamentoAfterSlide;
+        byte NewInsAffectsEnvelope;
+        byte ExtChChannelStateShared;
+        byte IgnoreDACModeChangeOutsideIntendedChannel;
+        
+        byte E1xyAndE2xyTakePriorityOverSlide00;
+        byte NewSegaPCM;
+        byte WeirdBlockBasedChipPitchSlides;
+        byte SNDutyMacroAlwaysResetsPhase;
+        
+        byte PitchMacroIsLinear;
+        byte OldOctaveBoundaryBehavior;
+        byte DisableOPN2DACVolumeControl;
+        byte NewVolumeScalingStrategy;
+        
+        byte VolumeMacroStillAppliesAfterEnd;
+        byte BrokenOutVol;
+        byte E1xyAndE2xyStopOnSameNote;
+        byte BrokenInitialPositionOfPortaAfterArp;
+        
+        byte SNPeriodsUnder8AreTreatedAs1;
+        byte CutDelayEffectPolicy;
+        byte OB_0DEffectTreatment;
+        byte AutomaticSystemNameDetection;
+        
+        byte DisableSampleMacro;
+        byte BrokenOutVolEpisode;
+        byte OldArpeggioStrategy;
+        byte VirtualTempoNumerator;
 
+        byte VirtualTempoDenominator;
+
+        string FirstSubsongName;
+        string FirstSubsongName;  
     };
 
     //Writing
